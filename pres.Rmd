@@ -1,0 +1,133 @@
+---
+title: "Health Expectancy"
+author: "Tim Riffe"
+date: "11/20/2020"
+output: 
+  beamer_presentation:
+    colortheme: "frigatebird"
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## 
+
+\Large
+> Average number of years lived in good health
+
+\pause
+
+> Summary index of an underlying distribution
+
+## Motivation
+
+- Quality vs quantity of years?
+- Hidden inequality?
+- Process?
+- Labor force (GALI question)?
+- Advocacy?
+
+## Monitoring
+
+\begin{center}
+\includegraphics[width=11cm]{Healthy-life-years-at-birth_04_04_20.png}
+\end{center}
+
+## ...
+
+\Large
+> What about intervention?
+
+## Campell's Law
+
+> “The more any quantitative social indicator is used for social decision-making, the more subject it will be to corruption pressures and the more apt it will be to distort and corrupt the social processes it is intended to monitor”
+
+\footnotesize
+Campbell, D. T. (1979). Assessing the impact of planned social change. Evaluation and program planning, 2(1), 67-90.
+
+## Goodhart's Law
+
+> “Any observed statistical regularity will tend to collapse once pressure is placed upon it for control purposes.”
+
+\footnotesize
+Goodhart, Charles (1975). "Problems of Monetary Management: The U.K. Experience". Papers in Monetary Economics. 1. Sydney: Reserve Bank of Australia.
+
+## Anything to discuss?
+
+## Measures
+
+- Sullivan
+- Multistate
+
+## Sullivan 
+
+- $HLE(x) = \int l(x)\pi(x) \mathrm{d}x$
+- List properties (5 min)
+
+## Multistate
+
+- Process model
+- Draw state space diagrams 
+- Draw how it works 
+
+## Properties
+
+\begin{center}
+\includegraphics[width=11cm]{chuttersnap-gts_Eh4g1lk-unsplash.jpg}
+\end{center}
+
+## Properties
+
+\begin{center}
+\includegraphics[width=11cm]{nii-sx7kn7GNf6E-unsplash.jpg}
+\end{center}
+
+## Variants
+
+- Discrete
+  - Matrix algebra *
+  - Lifetable *
+  - Simulation *
+- Continuous
+  - Matrix algebra
+  - Differential equations
+  
+## Considerations
+
+- Initial conditions?
+- Mid-interval approximations?
+- Strata or state?
+- Memoryless?
+- Rate fluctuations?
+- Health comparability?
+  
+## Equivalencies
+
+- Cohorts
+- Stationary populations
+  - reversibility
+  
+## Further training
+
+- early December Jutta Gampe Multistate course.
+- maaaybe Spring Hal Caswell matrix pop course. 
+
+## Special conferences
+
+- IAPHS <https://iaphs.org/>
+- REVES <https://reves.site.ined.fr/en/home/about_reves/>
+
+## Local technical resources
+
+- Transition probs: J. Gampe, A. Carollo, D. Schneider, A. Lorenti, C. Dudel
+- Markov measures: C. Dudel, me
+
+## Stuff I work on
+
+- Within-inequality in Sullivan setting
+- Decomposition of discrete multistate
+- Other within-lifecourse duration measures
+- Time perspectives on compression and ageing
+
