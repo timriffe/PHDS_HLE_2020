@@ -4,7 +4,7 @@ library(tidyverse)
 source("Functions.R")
 
 # Read in the data (Daniel Schneider gave these to me, haha)
-TR <- readRDS("TR_v06_collapsed.rds") 
+TR <- read_csv("TRv6.csv") 
 
 # take a peek: we have many strata
 head(TR)

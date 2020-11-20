@@ -3,7 +3,7 @@ library(markovchain)
 library(tidyverse)
 source("Functions.R")
 
-TR <- readRDS("TR_v06_collapsed.rds") 
+TR <- read_csv("TRv6.csv") 
 
 # define a subset
 TRsub <- TR %>% filter(sex == "f",

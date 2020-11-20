@@ -1,7 +1,9 @@
 ---
 title: "Health Expectancy"
-author: "Tim Riffe"
-date: "11/20/2020"
+author: |
+  | Tim Riffe
+  | MPIDR
+date: "20 Nov, 2020"
 output: 
   beamer_presentation:
     colortheme: "frigatebird"
@@ -106,14 +108,38 @@ lines(a, lx/2, col = "white", lwd = 2)
 
 ## Multistate
 
-```{r}
+```{r, message = FALSE, warning = FALSE, echo = FALSE}
 library(tidyverse)
-
-TR <- read_csv("TRv6.csv") 
-TRsub <- TR %>% 
-  filter(sex == "f",
-         edu == "terciary",
-         time == 1996)
+library(ggdark)
+read_csv("TRv6.csv") %>% 
+filter(sex == "f",
+       edu == "terciary",
+       time == 1996) %>% 
+pivot_longer(m11:m24, 
+             names_to = "transition", 
+             values_to = "probability") %>% 
+mutate(transition = case_when(
+  transition == "m11" ~ "H->H",
+  transition == "m12" ~ "H->U",
+  transition == "m14" ~ "H->D",
+  transition == "m21" ~ "U->H",
+  transition == "m22" ~ "U->U",
+  transition == "m24" ~ "U->D",
+)) %>% 
+  ggplot(aes(x = age,
+             y = probability,
+             color = transition, 
+             group = transition)) +
+  geom_line() +
+  dark_theme_gray() + 
+  theme(
+        plot.background = element_rect(fill = "grey10"),
+        panel.background = element_blank(),
+        panel.grid.major = element_line(color = "grey30", size = 0.2),
+        panel.grid.minor = element_line(color = "grey30", size = 0.2),
+        legend.background = element_blank(),
+        axis.ticks = element_blank(),
+        legend.key = element_blank())
 
 ```
 
